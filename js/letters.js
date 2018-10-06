@@ -20,14 +20,11 @@ function countLetters(counter, sample_text) {
     return counter;
   }
 
-  if (sample_text.length > 0) {
-   currentLetter = sample_text.charAt(0).toLowerCase();
-    if(currentLetter === '.' || currentLetter === ',' || currentLetter === ' ' || currentLetter === '\n'){
-    }else{
-    counter[currentLetter]++
-    console.log(currentLetter);
+  let currentLetter = sample_text.charAt(0).toLowerCase();
+  if (counter[currentLetter] >= 0) {
+    counter[currentLetter]++;
   }
-  }
+
   countLetters(counter, sample_text.slice(1));
 }
 
